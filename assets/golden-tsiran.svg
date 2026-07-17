@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1400" height="900" viewBox="0 0 1400 900">
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1">
+    <stop offset="0" stop-color="#f8f5ee"/>
+    <stop offset="1" stop-color="#dce6dc"/>
+  </linearGradient>
+  <linearGradient id="gold" x1="0" y1="0" x2="1" y2="0">
+    <stop offset="0" stop-color="#c6a96a"/>
+    <stop offset="1" stop-color="#e3d1a2"/>
+  </linearGradient>
+</defs>
+<rect width="1400" height="900" fill="url(#bg)"/>
+<rect x="180" y="160" width="1040" height="570" rx="36" fill="#fffdf9" stroke="#c6a96a" stroke-width="4"/>
+<path d="M260 650 C420 430, 520 430, 700 650 C880 430, 980 430, 1140 650" fill="none" stroke="url(#gold)" stroke-width="16" stroke-linecap="round"/>
+<circle cx="700" cy="320" r="90" fill="none" stroke="#8ba18d" stroke-width="7"/>
+<path d="M655 320h90M700 275v90" stroke="#8ba18d" stroke-width="7" stroke-linecap="round"/>
+<text x="700" y="790" text-anchor="middle" font-size="64" font-family="serif" fill="#536454">Ոսկե Ծիրան</text>
+<text x="700" y="845" text-anchor="middle" font-size="28" font-family="sans-serif" fill="#8b7a52">Հարսանեկան հանդիսություն • 17:00</text>
+</svg>

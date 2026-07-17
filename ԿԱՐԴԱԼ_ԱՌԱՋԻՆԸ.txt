@@ -1,0 +1,15 @@
+ՊԱՏՐԱՍՏ ՎԵՐՋՆԱԿԱՆ ՏԱՐԲԵՐԱԿ
+
+Այս տարբերակում Netlify Forms-ը հեռացված է։
+Հրավերի դիզայնը, նկարները, երաժշտությունը և անիմացիաները պահպանված են։
+RSVP ձևը պատրաստ է Google Sheets-ին միանալու համար։
+
+Մնում է միայն մեկ կապ.
+1. Google Sheets-ում բացել Extensions → Apps Script։
+2. Տեղադրել google-apps-script/Code.gs ֆայլի կոդը։
+3. Deploy → New deployment → Web app։
+4. Execute as: Me, Who has access: Anyone։
+5. Ստացված /exec հղումը տեղադրել config.js ֆայլում՝
+   window.RSVP_ENDPOINT = "ԱՅՍՏԵՂ";
+
+GitHub-ում պետք է վերբեռնել այս պանակի պարունակությունը՝ index.html-ը և մյուս ֆայլերը նույն հիմնական մակարդակում։
