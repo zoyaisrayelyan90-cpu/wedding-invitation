@@ -92,7 +92,19 @@ if (rsvpForm) {
       });
 
       rsvpForm.reset();
-      openRsvpModal();
+
+const thanks = document.getElementById('thanks');
+
+if (thanks) {
+  rsvpForm.hidden = true;
+  thanks.hidden = false;
+  thanks.scrollIntoView({
+    behavior: 'smooth',
+    block: 'center'
+  });
+}
+
+openRsvpModal();
     } catch (error) {
       console.error('RSVP submission failed:', error);
       alert('Չհաջողվեց ուղարկել պատասխանը։ Խնդրում ենք կրկին փորձել։');
