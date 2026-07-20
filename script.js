@@ -66,7 +66,36 @@ function openRsvpModal() {
 document.querySelectorAll('[data-close-rsvp-modal]').forEach(button => {
   button.addEventListener('click', closeRsvpModal);
 });
+const guestCountField = document.getElementById('guestCountField');
 
+if (rsvpForm && guestCountField) {
+  const guestCountInput = rsvpForm.querySelector('input[name="guestCount"]');
+  const attendanceInputs = rsvpForm.querySelectorAll('input[name="attendance"]');
+
+  function updateGuestCountField() {
+    const selectedAttendance = rsvpForm.querySelector(
+      'input[name="attendance"]:checked'
+    );
+
+    const isNotAttending =
+      selectedAttendance && selectedAttendance.value === 'Ոչ';
+
+    if (isNotAttending) {
+      guestCountField.hidden = true;
+      guestCountInput.required = false;
+      guestCountInput.value = '';
+    } else {
+      guestCountField.hidden = false;
+      guestCountInput.required = true;
+    }
+  }
+
+  attendanceInputs.forEach(input => {
+    input.addEventListener('change', updateGuestCountField);
+  });
+
+  updateGuestCountField();
+}
 if (rsvpForm) {
   rsvpForm.addEventListener('submit', async event => {
     event.preventDefault();
