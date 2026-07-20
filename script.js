@@ -120,11 +120,26 @@ if (rsvpForm) {
         body: formData
       });
 
+      const attendance =
+  rsvpForm.querySelector('input[name="attendance"]:checked')?.value || '';
       rsvpForm.reset();
 
 const thanks = document.getElementById('thanks');
 
-if (thanks) {
+      if (thanks) {
+  if (!thanks.dataset.originalHtml) {
+    thanks.dataset.originalHtml = thanks.innerHTML;
+  }
+
+  if (attendance === 'Ոչ') {
+    thanks.innerHTML = `
+      <h3>Շնորհակալություն</h3>
+      <p>Շնորհակալություն, որ տեղեկացրեցիք Ձեր որոշման մասին։ Մաղթում ենք Ձեզ ամենայն բարիք։ 🤍</p>
+    `;
+  } else {
+    thanks.innerHTML = thanks.dataset.originalHtml;
+  }
+
   rsvpForm.hidden = true;
   thanks.hidden = false;
   thanks.scrollIntoView({
